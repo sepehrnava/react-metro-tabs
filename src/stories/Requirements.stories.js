@@ -23,9 +23,35 @@ stories.add("Hero", () => {
       >
         <MetroTabs>
           not rendered
-          <MetroTab title='tab1'>content1</MetroTab>
-          <MetroTab title='tab2'>content2</MetroTab>
-          <MetroTab title='tab3'>content3</MetroTab>
+          <MetroTab title='tab1'>
+            <div
+              style={{
+                backgroundColor: "aquamarine",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              content1
+            </div>
+          </MetroTab>
+          <MetroTab title='tab2'>
+            <div
+              style={{
+                backgroundColor: "antiquewhite",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              content2
+            </div>
+          </MetroTab>
+          <MetroTab title='tab3'>
+            <div
+              style={{ backgroundColor: "aqua", width: "100%", height: "100%" }}
+            >
+              content3
+            </div>
+          </MetroTab>
         </MetroTabs>
       </div>
     </>

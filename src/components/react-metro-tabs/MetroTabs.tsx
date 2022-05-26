@@ -45,13 +45,33 @@ export const MetroTabs = (props: IMetroTabs) => {
 
   useEffect(() => {
     const titlesContainer = document.getElementById("titles-container");
+    const contentContainer = document.getElementById("content-container");
+
     const tabEl = document.getElementById("metro-tab" + activeTab);
     const firstTabEl = document.getElementById("metro-tab0");
-    if (tabEl && firstTabEl && titlesContainer) {
-      const offsetLeft =
+
+    const contentEl = document.getElementById("metro-content" + activeTab);
+    const firstContentEl = document.getElementById("metro-content0");
+
+    if (
+      tabEl &&
+      firstTabEl &&
+      titlesContainer &&
+      contentContainer &&
+      contentEl &&
+      firstContentEl
+    ) {
+      const offsetLeftTitle =
         tabEl.getBoundingClientRect().left -
         firstTabEl.getBoundingClientRect().left;
-      titlesContainer.style.transform = "translateX(-" + offsetLeft + "px)";
+      titlesContainer.style.transform =
+        "translateX(-" + offsetLeftTitle + "px)";
+
+      const offsetLeftContent =
+        contentEl.getBoundingClientRect().left -
+        firstContentEl.getBoundingClientRect().left;
+      contentContainer.style.transform =
+        "translateX(-" + offsetLeftContent + "px)";
     }
   }, [activeTab]);
 
@@ -67,8 +87,9 @@ export const MetroTabs = (props: IMetroTabs) => {
         <div
           style={{
             overflow: "hidden",
-            backgroundColor: "aquamarine",
+
             height: "100%",
+            width: "100%",
           }}
         >
           <div
@@ -80,6 +101,7 @@ export const MetroTabs = (props: IMetroTabs) => {
               flexDirection: "row",
               alignItems: "center",
               transition: "all 0.2s",
+              width: "100%",
             }}
           >
             {titles.map((item, index) => (
@@ -98,9 +120,32 @@ export const MetroTabs = (props: IMetroTabs) => {
               </h1>
             ))}
           </div>
-          <div style={{ position: "relative", left: 5 }}>
+          <div
+            id='content-container'
+            style={{
+              position: "relative",
+              left: 5,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              transition: "all 0.2s",
+              height: "100%",
+            }}
+          >
             {renderItems.map((item, index) => {
-              return activeTab === index && <div key={index}>{item}</div>;
+              return (
+                <div
+                  id={"metro-content" + index}
+                  style={{
+                    minWidth: "calc(100% - 10px)",
+                    maxWidth: "calc(100% - 10px)",
+                    height: "100%",
+                  }}
+                  key={index}
+                >
+                  {item}
+                </div>
+              );
             })}
           </div>
         </div>
