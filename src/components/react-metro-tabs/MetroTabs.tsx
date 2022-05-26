@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Hammer from "react-hammerjs";
 import Tab from "./Tab/Index";
 
-import { IHero } from "../Types/Hero.types";
+import { IMetroTabs } from "../Types/MetroTabs.types";
 
-export const MetroTabContext = React.createContext<IHero>({});
+export const MetroTabContext = React.createContext<IMetroTabs>({});
 
-export const MetroTabs = (props: IHero) => {
+export const MetroTabs = (props: IMetroTabs) => {
   const {
     children,
     transitionDuration,
@@ -15,7 +16,7 @@ export const MetroTabs = (props: IHero) => {
     targetHeight,
   } = props;
 
-  let contextValue: IHero = {
+  let contextValue: IMetroTabs = {
     transitionDuration,
     related,
     wrapperRef,
@@ -24,24 +25,86 @@ export const MetroTabs = (props: IHero) => {
 
   let renderItems = [];
 
-  if (children.length > 0) {
+  if (children?.length > 0) {
     children.forEach((element: any) => {
       if (element.type === Tab) {
         renderItems.push(element);
       }
     });
   } else {
-    if (children.type === Tab) renderItems.push(children);
+    if (children?.type === Tab) renderItems.push(children);
   }
+
+  let titles: Array<string> = [];
+
+  renderItems.forEach((element: any) => {
+    titles.push(element.props.title);
+  });
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const titlesContainer = document.getElementById("titles-container");
+    const tabEl = document.getElementById("metro-tab" + activeTab);
+    const firstTabEl = document.getElementById("metro-tab0");
+    if (tabEl && firstTabEl && titlesContainer) {
+      const offsetLeft =
+        tabEl.getBoundingClientRect().left -
+        firstTabEl.getBoundingClientRect().left;
+      titlesContainer.style.transform = "translateX(-" + offsetLeft + "px)";
+    }
+  }, [activeTab]);
+
+  const handleSwipe = (e: { direction: number }) => {
+    if (e.direction === 2 && activeTab < titles.length - 1)
+      setActiveTab(activeTab + 1);
+    if (e.direction === 4 && activeTab > 0) setActiveTab(activeTab - 1);
+  };
 
   return (
     <MetroTabContext.Provider value={contextValue}>
-      <div style={style}>
-        {renderItems.map((item, index) => (
-          // Only do this if items have no stable IDs
-          <div key={index}>{item}</div>
-        ))}
-      </div>
+      <Hammer onSwipe={handleSwipe}>
+        <div
+          style={{
+            overflow: "hidden",
+            backgroundColor: "aquamarine",
+            height: "100%",
+          }}
+        >
+          <div
+            id='titles-container'
+            style={{
+              position: "relative",
+              left: 5,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              transition: "all 0.2s",
+            }}
+          >
+            {titles.map((item, index) => (
+              <h1
+                id={"metro-tab" + index}
+                key={index}
+                style={{
+                  marginRight: 20,
+                  color: activeTab === index ? "#000" : "#888",
+                  cursor: "pointer",
+                  transition: "all 0.2s",
+                }}
+                onClick={() => setActiveTab(index)}
+              >
+                {item}
+              </h1>
+            ))}
+          </div>
+          <div style={{ position: "relative", left: 5 }}>
+            {renderItems.map((item, index) => {
+              return activeTab === index && <div key={index}>{item}</div>;
+            })}
+          </div>
+        </div>
+      </Hammer>
     </MetroTabContext.Provider>
   );
 };

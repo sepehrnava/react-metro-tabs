@@ -24,6 +24,7 @@
     "@storybook/addon-essentials": "^6.1.16",
     "@storybook/addon-links": "^6.1.16",
     "@storybook/react": "^6.1.16",
+    "@types/react-hammerjs": "^1.0.4",
     "babel-loader": "^8.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "postcss": "^8.4.6",
-    "react-fps": "^1.0.6"
+    "react-fps": "^1.0.6",
+    "react-hammerjs": "^1.0.1"
   }
 }

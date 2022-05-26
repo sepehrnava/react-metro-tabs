@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { IItem } from "../../Types/Hero.types";
+import { ITab } from "../../Types/MetroTabs.types";
 
-const MetroTab = (props: IItem) => {
+const MetroTab = (props: ITab) => {
   const { children } = props;
 
   return <>{children}</>;

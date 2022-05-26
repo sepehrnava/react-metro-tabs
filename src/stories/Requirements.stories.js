@@ -13,12 +13,19 @@ stories.add("Hero", () => {
   return (
     <>
       {/* <FpsView /> */}
-      <div>
+      <div
+        style={{
+          border: "2px solid black",
+          borderRadius: 10,
+          height: 500,
+          width: 360,
+        }}
+      >
         <MetroTabs>
           not rendered
-          <MetroTab>content1</MetroTab>
-          <MetroTab>content2</MetroTab>
-          <MetroTab>content3</MetroTab>
+          <MetroTab title='tab1'>content1</MetroTab>
+          <MetroTab title='tab2'>content2</MetroTab>
+          <MetroTab title='tab3'>content3</MetroTab>
         </MetroTabs>
       </div>
     </>
