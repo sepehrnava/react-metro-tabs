@@ -10,9 +10,10 @@ export const MetroTabs = (props: IMetroTabs) => {
   const {
     children,
     transitionDuration = 1000,
-    tabSpaces = 100,
+    tabSpaces = 70,
     tabsColor = "#000",
-    tabFontSize = "2em",
+    tabFontSize = "2.5em",
+    tabFontWeight = "normal",
     transitionTimingFunction = "ease",
     onTabChange,
   } = props;
@@ -24,6 +25,7 @@ export const MetroTabs = (props: IMetroTabs) => {
     tabFontSize,
     transitionTimingFunction,
     onTabChange,
+    tabFontWeight,
   };
 
   let renderItems = [];
@@ -130,7 +132,10 @@ export const MetroTabs = (props: IMetroTabs) => {
             overflow: "hidden",
             margin,
             height: "100%",
+            maxHeight: "100%",
             width: "100%",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
           <div
@@ -160,6 +165,7 @@ export const MetroTabs = (props: IMetroTabs) => {
                     transitionTimingFunction,
                     whiteSpace: "nowrap",
                     fontSize: tabFontSize,
+                    fontWeight: tabFontWeight,
                   }}
                   onClick={() => handleClickTab(index)}
                 >
@@ -177,7 +183,7 @@ export const MetroTabs = (props: IMetroTabs) => {
               flexDirection: "row",
               alignItems: "center",
               transition: "all " + transitionDuration / 1000 + "s",
-              height: "100%",
+              flex: 1,
             }}
           >
             {renderItems.map((item, index) => {

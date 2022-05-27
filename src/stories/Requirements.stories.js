@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
 import { MetroTabs, MetroTab } from "../components/react-metro-tabs/MetroTabs";
 // import { FpsView } from "react-fps";
+import "./styles.css";
 
 const stories = storiesOf("App Test", module);
 
@@ -23,75 +24,90 @@ stories.add("Hero", () => {
       {/* <FpsView /> */}
       <div
         style={{
-          border: "2px solid black",
-          borderRadius: 10,
-          height: 500,
-          width: 700,
-          // backgroundColor: "#000",
+          border: "7px solid #000",
+          borderRadius: 30,
+          height: 650,
+          width: 360,
+          backgroundColor: "#444",
         }}
       >
         <MetroTabs
           // transitionDuration={10000}
           // tabSpaces={tabSpaces}
-          // tabsColor='#fff'
+          tabsColor='#fff'
+          // tabFontWeight='bold'
           // tabFontSize={20}
           // transitionTimingFunction='linear'
           onTabChange={onTabChange}
         >
           not rendered
-          <MetroTab title='Home'>
+          <MetroTab title='Introduction'>
             <div
               style={{
-                // backgroundColor: "aquamarine",
                 width: "100%",
                 height: "100%",
+                display: "flex",
+                color: "#fff",
+                fontSize: "2.2em",
+                maxWidth: "80%",
+                paddingTop: 70,
+                color: "antiquewhite",
+                paddingLeft: 20,
               }}
             >
-              content1
+              Windows Phone Metro Theme Was Awesome!
             </div>
           </MetroTab>
-          <MetroTab title='Biography'>
+          <MetroTab title='Problem'>
             <div
               style={{
-                // backgroundColor: "antiquewhite",
                 width: "100%",
                 height: "100%",
+                display: "flex",
+                color: "#fff",
+                fontSize: "2.2em",
+                paddingTop: 70,
+                color: "#ff6e00",
+                maxWidth: "80%",
+                paddingLeft: 20,
               }}
             >
-              content2
+              But unfortunately, it is not between us anymore.
             </div>
           </MetroTab>
-          <MetroTab title='Contact1'>
+          <MetroTab title='Solution'>
             <div
               style={{
-                // backgroundColor: "aqua",
                 width: "100%",
                 height: "100%",
+                display: "flex",
+                color: "#fff",
+                fontSize: "2.2em",
+                paddingTop: 70,
+                color: "#00f6ff",
+                maxWidth: "80%",
+                paddingLeft: 20,
               }}
             >
-              content3
+              However, you can use this package to bring a taste of it into your
+              react.js application.
             </div>
           </MetroTab>
-          <MetroTab title='Contact2ewewrwerrewrew'>
+          <MetroTab title='Have Fun'>
             <div
               style={{
-                // backgroundColor: "aqua",
                 width: "100%",
                 height: "100%",
+                display: "flex",
+                color: "#fff",
+                fontSize: "2.2em",
+                paddingTop: 70,
+                color: "#00ffa6",
+                maxWidth: "80%",
+                paddingLeft: 20,
               }}
             >
-              content4
-            </div>
-          </MetroTab>
-          <MetroTab title='Discography'>
-            <div
-              style={{
-                // backgroundColor: "aqua",
-                width: "100%",
-                height: "100%",
-              }}
-            >
-              content3
+              Have fun and send us some feedbacks!
             </div>
           </MetroTab>
         </MetroTabs>

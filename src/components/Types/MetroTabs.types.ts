@@ -9,6 +9,7 @@ export interface IMetroTabs {
   tabSpaces?: number | string;
   tabsColor?: string;
   tabFontSize?: number | string;
+  tabFontWeight?: number | string;
   transitionTimingFunction?: string;
   onTabChange?: (arg0: any) => any;
 }
