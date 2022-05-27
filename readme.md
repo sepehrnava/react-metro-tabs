@@ -23,8 +23,6 @@ import React, { Component } from "react";
 
 import { MetroTabs, MetroTab } from "react-metro-tabs";
 
-import { MetroTabs, MetroTab } from "react-metro-tabs";
-
 export default function App() {
   return (
     <div
@@ -32,13 +30,13 @@ export default function App() {
         border: "2px solid black",
         borderRadius: 10,
         height: 500,
-        width: 360,
+        width: 300,
       }}
     >
-      <MetroTabs onTabChange={(e) => console.log(e)}>
-        <MetroTab title='tab1'>content1</MetroTab>
-        <MetroTab title='tab2'>content2</MetroTab>
-        <MetroTab title='tab3'>content3</MetroTab>
+      <MetroTabs onTabChange={(e) => console.log(e)} tabSpaces={50}>
+        <MetroTab title='landing page'>content1</MetroTab>
+        <MetroTab title='study cases'>content2</MetroTab>
+        <MetroTab title='contact us'>content3</MetroTab>
       </MetroTabs>
     </div>
   );
