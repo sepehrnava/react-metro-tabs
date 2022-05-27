@@ -18,6 +18,8 @@ yarn add react-metro-tabs
 
 ## Example Usage
 
+[Sandbox](https://codesandbox.io/s/strange-butterfly-hu80m2?from-embed)
+
 ```jsx
 import React, { Component } from "react";
 
