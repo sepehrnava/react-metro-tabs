@@ -87,6 +87,7 @@ export const MetroTabs = (props: IMetroTabs) => {
         type: "press",
         prevIndex: activeTab,
         currentIndex: index,
+        currentTabTitle: titles[index],
       });
     }
 
@@ -102,6 +103,7 @@ export const MetroTabs = (props: IMetroTabs) => {
           direction: "right",
           prevIndex: activeTab,
           currentIndex: activeTab + 1,
+          currentTabTitle: titles[activeTab + 1],
         });
       }
     }
@@ -114,6 +116,7 @@ export const MetroTabs = (props: IMetroTabs) => {
           direction: "left",
           prevIndex: activeTab,
           currentIndex: activeTab - 1,
+          currentTabTitle: titles[activeTab - 1],
         });
       }
     }
