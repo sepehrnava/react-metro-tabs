@@ -1,6 +1,6 @@
 {
   "name": "react-metro-tabs",
-  "version": "0.1.5",
+  "version": "1.0.1",
   "description": "windows phone style tabs in react.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

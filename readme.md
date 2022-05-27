@@ -23,40 +23,47 @@ import React, { Component } from "react";
 
 import { MetroTabs, MetroTab } from "react-metro-tabs";
 
-class Example extends Component {
-  render() {
-    return (
-      <div
-        style={{
-          border: "2px solid black",
-          borderRadius: 10,
-          height: 500,
-          width: 360,
-        }}
-      >
-        <MetroTabs onTabChange={(e) => console.log(e)}>
-          <MetroTab title='tab1'>content1</MetroTab>
-          <MetroTab title='tab2'>content2</MetroTab>
-          <MetroTab title='tab3'>content3</MetroTab>
-        </MetroTabs>
-      </div>
-    );
-  }
+import { MetroTabs, MetroTab } from "react-metro-tabs";
+
+export default function App() {
+  return (
+    <div
+      style={{
+        border: "2px solid black",
+        borderRadius: 10,
+        height: 500,
+        width: 360,
+      }}
+    >
+      <MetroTabs onTabChange={(e) => console.log(e)}>
+        <MetroTab title='tab1'>content1</MetroTab>
+        <MetroTab title='tab2'>content2</MetroTab>
+        <MetroTab title='tab3'>content3</MetroTab>
+      </MetroTabs>
+    </div>
+  );
 }
 ```
 
 ## MetroTabs props
 
-| Prop                     | Type     | Description                                  | Default  |
-| ------------------------ | -------- | -------------------------------------------- | -------- |
-| transitionDuration       | number   | Allow vertical drag scrolling                | 1000     |
-| tabSpaces                | number   | string                                       | 70       |
-| tabsColor                | string   | Hide the scrollbars                          | "#000"   |
-| tabFontSize              | number   | string                                       | "2.5em"  |
-| tabFontWeight            | number   | string                                       | "normal" |
-| transitionTimingFunction | string   | Invoked when user scrolling container        |          |
-| onTabChange              | Function | Invoked when user ends scrolling container   |          |
-| children                 | Node     | Invoked when user starts scrolling container |          |
+| Prop                     | Type     | Description                                               | Default  |
+| ------------------------ | -------- | --------------------------------------------------------- | -------- |
+| transitionDuration       | number   | transition duration                                       | 1000     |
+| tabSpaces                | number   | space between tabs, make it dynamic for making responsive | 70       |
+| tabsColor                | string   | color of all tabs                                         | "#000"   |
+| tabFontSize              | number   | font size of all tabs                                     | "2.5em"  |
+| tabFontWeight            | number   | font weight of all tabs                                   | "normal" |
+| transitionTimingFunction | string   | transition timing function                                | "ease"   |
+| onTabChange              | Function | function that triggers on tab change                      |          |
+| children                 | Node     | children (only MetroTab is allowed)                       |          |
+
+## MetroTab props
+
+| Prop     | Type   | Description                           | Default |
+| -------- | ------ | ------------------------------------- | ------- |
+| title    | string | title of the tab                      |         |
+| children | Node   | children (every children are allowed) |         |
 
 ## License
 
