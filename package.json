@@ -1,13 +1,22 @@
 {
   "name": "react-metro-tabs",
   "version": "0.1.4",
-  "description": "",
+  "description": "windows phone style tabs in react.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "author": "Sepehr Nava",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/spnava/react-metro-tabs"
   },
+  "keywords": [
+    "react",
+    "tab",
+    "windows phone",
+    "metro",
+    "animation"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 6006",
@@ -16,8 +25,6 @@
     "build-lib": "rollup -c",
     "publish-lib": "rollup -c && npm publish"
   },
-  "author": "Sepehr Nava",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
