@@ -4,6 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spnava/react-metro-tabs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 6006",
@@ -42,7 +46,6 @@
   },
   "dependencies": {
     "postcss": "^8.4.6",
-    "react-fps": "^1.0.6",
     "react-hammerjs": "^1.0.1"
   }
 }

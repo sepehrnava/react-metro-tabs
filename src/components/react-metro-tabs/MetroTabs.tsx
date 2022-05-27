@@ -165,6 +165,7 @@ export const MetroTabs = (props: IMetroTabs) => {
                     transitionTimingFunction,
                     whiteSpace: "nowrap",
                     fontSize: tabFontSize,
+                    //@ts-ignore
                     fontWeight: tabFontWeight,
                   }}
                   onClick={() => handleClickTab(index)}
