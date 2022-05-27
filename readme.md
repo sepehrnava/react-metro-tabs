@@ -61,3 +61,4 @@ class Example extends Component {
 ## License
 
 The source code is licensed under MIT, all assets are copyrighted to their respective owner © [spnava](https://github.com/spnava)
+This package uses react-hammerjs underhood
