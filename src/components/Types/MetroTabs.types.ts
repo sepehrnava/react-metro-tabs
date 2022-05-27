@@ -1,17 +1,16 @@
-import { RefObject } from "react";
 export interface ISetOpen {
   (value: boolean): void;
 }
 export interface IMetroTabs {
-  open?: boolean;
-  setOpen?: ISetOpen;
-  controlled?: boolean;
+  // padding?: number;
+  // margin?: number;
   children?: any;
   transitionDuration?: number;
-  related?: boolean;
-  style?: Object;
-  wrapperRef?: RefObject<HTMLElement>;
-  targetHeight?: number | "full" | "same";
+  tabSpaces?: number | string;
+  tabsColor?: string;
+  tabFontSize?: number | string;
+  transitionTimingFunction?: string;
+  onSwipe?: (arg0: any) => any;
 }
 
 export interface ITab {

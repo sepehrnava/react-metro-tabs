@@ -1,15 +1,23 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
 import { MetroTabs, MetroTab } from "../components/react-metro-tabs/MetroTabs";
-import { FpsView } from "react-fps";
+// import { FpsView } from "react-fps";
 
 const stories = storiesOf("App Test", module);
 
 stories.add("Hero", () => {
-  const [open, setOpen] = useState(false);
-  const [counter, setCounter] = useState(0);
+  // const [tabSpaces, setTabSpaces] = useState(100);
 
-  const ref = useRef(null);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setTabSpaces(500);
+  //   }, 3000);
+  // }, []);
+
+  const onSwipe = (e) => {
+    console.log(e);
+  };
+
   return (
     <>
       {/* <FpsView /> */}
@@ -18,15 +26,23 @@ stories.add("Hero", () => {
           border: "2px solid black",
           borderRadius: 10,
           height: 500,
-          width: 360,
+          width: 700,
+          // backgroundColor: "#000",
         }}
       >
-        <MetroTabs>
+        <MetroTabs
+          // transitionDuration={10000}
+          // tabSpaces={tabSpaces}
+          // tabsColor='#fff'
+          // tabFontSize={20}
+          // transitionTimingFunction='linear'
+          onSwipe={onSwipe}
+        >
           not rendered
-          <MetroTab title='tab1'>
+          <MetroTab title='Home'>
             <div
               style={{
-                backgroundColor: "aquamarine",
+                // backgroundColor: "aquamarine",
                 width: "100%",
                 height: "100%",
               }}
@@ -34,10 +50,10 @@ stories.add("Hero", () => {
               content1
             </div>
           </MetroTab>
-          <MetroTab title='tab2'>
+          <MetroTab title='Biography'>
             <div
               style={{
-                backgroundColor: "antiquewhite",
+                // backgroundColor: "antiquewhite",
                 width: "100%",
                 height: "100%",
               }}
@@ -45,9 +61,35 @@ stories.add("Hero", () => {
               content2
             </div>
           </MetroTab>
-          <MetroTab title='tab3'>
+          <MetroTab title='Contact1'>
             <div
-              style={{ backgroundColor: "aqua", width: "100%", height: "100%" }}
+              style={{
+                // backgroundColor: "aqua",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              content3
+            </div>
+          </MetroTab>
+          <MetroTab title='Contact2ewewrwerrewrew'>
+            <div
+              style={{
+                // backgroundColor: "aqua",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              content4
+            </div>
+          </MetroTab>
+          <MetroTab title='Discography'>
+            <div
+              style={{
+                // backgroundColor: "aqua",
+                width: "100%",
+                height: "100%",
+              }}
             >
               content3
             </div>
