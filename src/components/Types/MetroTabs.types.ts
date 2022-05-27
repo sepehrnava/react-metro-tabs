@@ -10,7 +10,7 @@ export interface IMetroTabs {
   tabsColor?: string;
   tabFontSize?: number | string;
   transitionTimingFunction?: string;
-  onSwipe?: (arg0: any) => any;
+  onTabChange?: (arg0: any) => any;
 }
 
 export interface ITab {

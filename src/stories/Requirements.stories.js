@@ -14,7 +14,7 @@ stories.add("Hero", () => {
   //   }, 3000);
   // }, []);
 
-  const onSwipe = (e) => {
+  const onTabChange = (e) => {
     console.log(e);
   };
 
@@ -36,7 +36,7 @@ stories.add("Hero", () => {
           // tabsColor='#fff'
           // tabFontSize={20}
           // transitionTimingFunction='linear'
-          onSwipe={onSwipe}
+          onTabChange={onTabChange}
         >
           not rendered
           <MetroTab title='Home'>

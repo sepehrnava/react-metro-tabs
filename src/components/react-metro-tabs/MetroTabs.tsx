@@ -14,7 +14,7 @@ export const MetroTabs = (props: IMetroTabs) => {
     tabsColor = "#000",
     tabFontSize = "2em",
     transitionTimingFunction = "ease",
-    onSwipe,
+    onTabChange,
   } = props;
 
   let contextValue: IMetroTabs = {
@@ -23,7 +23,7 @@ export const MetroTabs = (props: IMetroTabs) => {
     tabsColor,
     tabFontSize,
     transitionTimingFunction,
-    onSwipe,
+    onTabChange,
   };
 
   let renderItems = [];
@@ -82,8 +82,9 @@ export const MetroTabs = (props: IMetroTabs) => {
   }, [activeTab]);
 
   const handleClickTab = (index: number) => {
-    if (onSwipe) {
-      onSwipe({
+    if (onTabChange) {
+      onTabChange({
+        type: "press",
         prevIndex: activeTab,
         currentIndex: index,
       });
@@ -95,8 +96,9 @@ export const MetroTabs = (props: IMetroTabs) => {
   const handleSwipe = (e: { direction: number }) => {
     if (e.direction === 2 && activeTab < titles.length - 1) {
       setActiveTab(activeTab + 1);
-      if (onSwipe) {
-        onSwipe({
+      if (onTabChange) {
+        onTabChange({
+          type: "swipe",
           direction: "right",
           prevIndex: activeTab,
           currentIndex: activeTab + 1,
@@ -106,8 +108,9 @@ export const MetroTabs = (props: IMetroTabs) => {
 
     if (e.direction === 4 && activeTab > 0) {
       setActiveTab(activeTab - 1);
-      if (onSwipe) {
-        onSwipe({
+      if (onTabChange) {
+        onTabChange({
+          type: "swipe",
           direction: "left",
           prevIndex: activeTab,
           currentIndex: activeTab - 1,
