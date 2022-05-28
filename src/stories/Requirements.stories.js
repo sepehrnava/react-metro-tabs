@@ -4,9 +4,9 @@ import { MetroTabs, MetroTab } from "../components/react-metro-tabs/MetroTabs";
 // import { FpsView } from "react-fps";
 import "./styles.css";
 
-const stories = storiesOf("App Test", module);
+const stories = storiesOf("React Metro Tabs", module);
 
-stories.add("Hero", () => {
+stories.add("Example", () => {
   // const [tabSpaces, setTabSpaces] = useState(100);
 
   // useEffect(() => {

@@ -1,11 +1,12 @@
 {
   "name": "react-metro-tabs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "windows phone style tabs in react.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Sepehr Nava",
   "license": "MIT",
+  "homepage": "https://github.com/spnava/react-metro-tabs",
   "repository": {
     "type": "git",
     "url": "https://github.com/spnava/react-metro-tabs"
@@ -22,8 +23,11 @@
     "start": "start-storybook -p 6006",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-lib": "rollup -c",
-    "publish-lib": "rollup -c && npm publish"
+    "publish-lib": "rollup -c && npm publish",
+    "chromatic": "npx chromatic --project-token=b9e7cb4e41c0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -37,6 +41,8 @@
     "@storybook/react": "^6.1.16",
     "@types/react-hammerjs": "^1.0.4",
     "babel-loader": "^8.2.2",
+    "chromatic": "^6.5.4",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.38.4",

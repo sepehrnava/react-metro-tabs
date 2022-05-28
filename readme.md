@@ -5,7 +5,7 @@ windows phone style tabs in react.js
 ## Install
 
 ```bash
-npm install --save react-metro-tabs
+npm install react-metro-tabs
 ```
 
 ```bash
