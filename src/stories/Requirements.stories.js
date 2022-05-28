@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { storiesOf } from "@storybook/react";
 import { MetroTabs, MetroTab } from "../components/react-metro-tabs/MetroTabs";
-// import { FpsView } from "react-fps";
 import "./styles.css";
+import Readme from "./readme.mdx";
+import Code from "./code.mdx";
+import ComponentProps from "./componentProps.mdx";
 
 const stories = storiesOf("React Metro Tabs", module);
 
-stories.add("Example", () => {
+stories.add("Introduction", () => {
   // const [tabSpaces, setTabSpaces] = useState(100);
 
   // useEffect(() => {
@@ -21,7 +23,7 @@ stories.add("Example", () => {
 
   return (
     <>
-      {/* <FpsView /> */}
+      <Readme />
       <div
         style={{
           border: "7px solid #000",
@@ -112,6 +114,15 @@ stories.add("Example", () => {
           </MetroTab>
         </MetroTabs>
       </div>
+      <Code />
+    </>
+  );
+});
+
+stories.add("Component Props", () => {
+  return (
+    <>
+      <ComponentProps />
     </>
   );
 });

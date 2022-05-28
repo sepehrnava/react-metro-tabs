@@ -1,0 +1,94 @@
+## code:
+
+```jsx
+import React, { Component } from "react";
+
+import { MetroTabs, MetroTab } from "react-metro-tabs";
+
+export default function App() {
+  return (
+    <div
+      style={{
+        border: "7px solid #000",
+        borderRadius: 30,
+        height: 650,
+        width: 360,
+        backgroundColor: "#444",
+      }}
+    >
+      <MetroTabs tabsColor='#fff' onTabChange={onTabChange}>
+        not rendered
+        <MetroTab title='Introduction'>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              color: "#fff",
+              fontSize: "2.2em",
+              maxWidth: "80%",
+              paddingTop: 70,
+              color: "antiquewhite",
+              paddingLeft: 20,
+            }}
+          >
+            Windows Phone Metro Theme Was Awesome!
+          </div>
+        </MetroTab>
+        <MetroTab title='Problem'>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              color: "#fff",
+              fontSize: "2.2em",
+              paddingTop: 70,
+              color: "#ff6e00",
+              maxWidth: "80%",
+              paddingLeft: 20,
+            }}
+          >
+            But unfortunately, it is not between us anymore.
+          </div>
+        </MetroTab>
+        <MetroTab title='Solution'>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              color: "#fff",
+              fontSize: "2.2em",
+              paddingTop: 70,
+              color: "#00f6ff",
+              maxWidth: "80%",
+              paddingLeft: 20,
+            }}
+          >
+            However, you can use this package to bring a taste of it into your
+            react.js application.
+          </div>
+        </MetroTab>
+        <MetroTab title='Have Fun'>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              color: "#fff",
+              fontSize: "2.2em",
+              paddingTop: 70,
+              color: "#00ffa6",
+              maxWidth: "80%",
+              paddingLeft: 20,
+            }}
+          >
+            Have fun and send us some feedbacks!
+          </div>
+        </MetroTab>
+      </MetroTabs>
+    </div>
+  );
+}
+```

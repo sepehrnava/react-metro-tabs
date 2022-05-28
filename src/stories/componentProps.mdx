@@ -1,0 +1,25 @@
+## MetroTabs props
+
+| Prop                     | Type     | Description                                               | Default  |
+| ------------------------ | -------- | --------------------------------------------------------- | -------- |
+| transitionDuration       | number   | transition duration                                       | 1000     |
+| tabSpaces                | number   | space between tabs, make it dynamic for making responsive | 70       |
+| tabsColor                | string   | color of all tabs                                         | "#000"   |
+| tabFontSize              | number   | font size of all tabs                                     | "2.5em"  |
+| tabFontWeight            | number   | font weight of all tabs                                   | "normal" |
+| transitionTimingFunction | string   | transition timing function                                | "ease"   |
+| onTabChange              | Function | function that triggers on tab change                      |          |
+| children                 | Node     | children (only MetroTab is allowed)                       |          |
+
+## MetroTab props
+
+| Prop     | Type   | Description                           | Default |
+| -------- | ------ | ------------------------------------- | ------- |
+| title    | string | title of the tab                      |         |
+| children | Node   | children (every children are allowed) |         |
+
+## License
+
+The source code is licensed under MIT, all assets are copyrighted to their respective owner.
+
+This package uses react-hammerjs underhood.
