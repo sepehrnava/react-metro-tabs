@@ -68,4 +68,5 @@ export default function App() {
 ## License
 
 The source code is licensed under MIT, all assets are copyrighted to their respective owner.
+
 This package uses react-hammerjs underhood.
