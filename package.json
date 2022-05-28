@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Sepehr Nava",
+  "organization": "Navaaco",
   "license": "MIT",
   "homepage": "https://github.com/spnava/react-metro-tabs",
   "repository": {
