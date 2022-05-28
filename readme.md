@@ -12,13 +12,19 @@ npm install react-metro-tabs
 yarn add react-metro-tabs
 ```
 
-## demo
+## Demo
 
 ![](./Assets/demo.gif)
 
-## Example Usage
+## Github Pages
+
+[Github Pages](https://spnava.github.io/react-metro-tabs/)
+
+## CodeSandbox
 
 [Sandbox](https://codesandbox.io/s/strange-butterfly-hu80m2?from-embed)
+
+## Example Usage
 
 ```jsx
 import React, { Component } from "react";
