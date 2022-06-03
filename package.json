@@ -1,6 +1,6 @@
 {
   "name": "react-metro-tabs",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "windows phone style tabs in react.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -11,9 +11,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/spnava/react-metro-tabs"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "react",

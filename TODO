@@ -1,0 +1,7 @@
+
+Todo:
+  ✔ initial setup
+  ☐ tabs absolute and relative mode (content and images behind tabs)
+  ☐ tabs location (up or down)
+  ☐ controlled active index and its function
+  ☐ tabs dynamic routing (#)
